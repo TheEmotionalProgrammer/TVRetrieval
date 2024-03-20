@@ -286,11 +286,11 @@ def compute_query2ctx_info(model, eval_dataset, opt, ctx_info,
     bsz = opt.eval_query_bsz
 
     if is_vcmr:
-        flat_st_ed_scores_sorted_indices = np.empty((n_total_query, max_before_nms), dtype=np.int)
+        flat_st_ed_scores_sorted_indices = np.empty((n_total_query, max_before_nms), dtype=int)
         flat_st_ed_sorted_scores = np.zeros((n_total_query, max_before_nms), dtype=np.float32)
 
     if is_vr or is_vcmr:
-        sorted_q2c_indices = np.empty((n_total_query, max_n_videos), dtype=np.int)
+        sorted_q2c_indices = np.empty((n_total_query, max_n_videos), dtype=int)
         sorted_q2c_scores = np.empty((n_total_query, max_n_videos), dtype=np.float32)
 
     if is_svmr:
